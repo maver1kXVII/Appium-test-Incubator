@@ -13,9 +13,9 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 public class AndroidSetup {
-    protected AndroidDriver driver;
+    protected static AndroidDriver driver;
 
-    protected void prepareAndroidForAppium() throws MalformedURLException {
+    protected static void prepareAndroidForAppium() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium-version", "1.0");
         capabilities.setCapability("platformName", "Android");
@@ -28,12 +28,12 @@ public class AndroidSetup {
     }
 
     @BeforeClass
-    public void setUp() throws Exception {
+    public static void setUp() throws Exception {
         prepareAndroidForAppium();
     }
 
     @AfterClass
-    public void tearDown() throws Exception {
+    public static void tearDown() throws Exception {
         driver.quit();
     }
 
