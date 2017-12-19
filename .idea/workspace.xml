@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88643d8-b5a8-4f95-aaed-c974252b0ff6" name="Default" comment="Activities">
+    <list default="true" id="d88643d8-b5a8-4f95-aaed-c974252b0ff6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" afterPath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" />
     </list>
@@ -29,8 +29,8 @@
       <file leaf-file-name="AndroidSetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="369">
+              <caret line="84" column="22" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -374,38 +374,45 @@
       <option name="project" value="LOCAL" />
       <updated>1513598902239</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Activities">
+      <created>1513673755711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1513673755711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Junit_test - 2017.12.19 at 15h 19m 27s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 20m 34s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 21m 40s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 24m 27s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 30m 17s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 36m 43s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 40m 02s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.19 at 15h 49m 34s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Junit_test - 2017.12.19 at 15h 51m 57s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Junit_test - 2017.12.19 at 15h 55m 00s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 18h 38m 37s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 18h 48m 15s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 18h 50m 32s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 19h 15m 19s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 19h 16m 53s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 19h 18m 28s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 19h 24m 05s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 19h 24m 50s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -561,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="369">
+          <caret line="84" column="22" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

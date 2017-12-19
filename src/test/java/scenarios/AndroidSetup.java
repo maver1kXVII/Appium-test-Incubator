@@ -2,9 +2,9 @@ package scenarios;
 
 import io.appium.java_client.android.AndroidDriver;
 
+import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -25,9 +25,15 @@ public class AndroidSetup {
     //кнопка в левом верхнем углу ("меню" или "назад")
     By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
     //кнопка "Любимые"
-    By favBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
+    By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
+    //первая запись в списке любимых
+    By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
+    //кнопка "В любимые"
+    //By favBtn = By.xpath("//android.widget.ImageView[@resource-id='info.goodline.btv:id/ivTriggerButtonContainer'");
+    By favBtn = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
 
     String activityMain = ".ui.activity.MainActivity";
+    String activityFav = ".ui.activity.SearchBarActivity";
 
     protected static void prepareAndroidForAppium() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -38,7 +44,6 @@ public class AndroidSetup {
         capabilities.setCapability("app", "/home/skaz17/myGitRepos/appiumTest/Appium-test-Incubator/apps/info-goodline-btv.391.apk");
         capabilities.setCapability("appPackage", "info.goodline.btv");
         capabilities.setCapability("appActivity", "info.goodline.btv.ui.activity.AuthActivity");
-        //capabilities.setCapability("appActivity", "info.goodline.btv.ui.activity.MainActivity");
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
     }
 
@@ -52,25 +57,54 @@ public class AndroidSetup {
         driver.quit();
     }
 
-    @Test
-    public void helloTest()
+    @Before
+    public void clearFavsTest()
     {
         //By password = By.id(app_package_name + "user_password");
         /*driver.findElement(userId).sendKeys("someone@testvagrant.com");
         driver.findElement(password).sendKeys("testvagrant123");*/
 
         waitForActivity(activityMain, 10);
-        assertEquals(activityMain, driver.currentActivity());
+        assertCurrentActivity(activityMain);
 
         driver.findElement(menuBtn).click();
 
-        wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.elementToBeClickable(favBtn));
-        driver.findElement(favBtn).click();
+        waitElement(favMenuBtn);
+        driver.findElement(favMenuBtn).click();
 
-        wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.elementToBeClickable(menuBtn));
-        assertEquals(".ui.activity.SearchBarActivity", driver.currentActivity());
+        waitElement(menuBtn);
+        assertCurrentActivity(activityFav);
+
+        //WebElement fav;
+        for (int i = 0; i < 2; i++) {
+            driver.findElement(favEl).click();
+            waitElement(favBtn);
+            driver.findElement(favBtn).click();
+            driver.findElement(menuBtn).click();
+            waitElement(menuBtn);
+            refresh();
+        }
+
+        driver.findElement(menuBtn).click();
+    }
+
+    @Test
+    public void openFavTest()
+    {
+        //By password = By.id(app_package_name + "user_password");
+        /*driver.findElement(userId).sendKeys("someone@testvagrant.com");
+        driver.findElement(password).sendKeys("testvagrant123");*/
+
+        //waitForActivity(activityMain, 10);
+        assertCurrentActivity(activityMain);
+
+        driver.findElement(menuBtn).click();
+
+        waitElement(favMenuBtn);
+        driver.findElement(favMenuBtn).click();
+
+        waitElement(menuBtn);
+        assertCurrentActivity(activityFav);
 
         driver.findElement(menuBtn).click();
     }
@@ -88,8 +122,24 @@ public class AndroidSetup {
         } while(!(driver.currentActivity().contains(activityName)) && (counter<=timeout));
     }
 
-    /*public void reportCurrentActivity()
+    public void assertCurrentActivity(String desiredActivity)
     {
-        System.out.println("Current activity: " + driver.currentActivity());
-    }*/
+        assertEquals(desiredActivity, driver.currentActivity());
+    }
+
+    public void waitElement(By element)
+    {
+        wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void refresh()
+    {
+        int starty = (int) (driver.manage().window().getSize().height * 0.90);
+        int endy = (int) (driver.manage().window().getSize().height * 0.20);
+        int startx = driver.manage().window().getSize().width / 2;
+        //System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
+        //Thread.sleep(10000);
+        driver.swipe(startx, endy, startx, starty, 300);
+    }
 }
