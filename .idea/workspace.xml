@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88643d8-b5a8-4f95-aaed-c974252b0ff6" name="Default" comment="">
+    <list default="true" id="d88643d8-b5a8-4f95-aaed-c974252b0ff6" name="Default" comment="Activities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" afterPath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" />
     </list>
@@ -29,8 +29,8 @@
       <file leaf-file-name="AndroidSetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            <state relative-caret-position="319">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,7 +41,7 @@
       <file leaf-file-name="AppTest01.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/AppTest01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="90">
               <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,6 +98,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -148,9 +149,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,38 +367,45 @@
       <option name="project" value="LOCAL" />
       <updated>1513598431345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix for JUnit">
+      <created>1513598902239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513598902239</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 42m 05s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 47m 43s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 48m 46s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 49m 31s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 54m 18s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 18h 57m 41s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AndroidSetup - 2017.12.18 at 19h 02m 01s.xml">
-      <configuration name="AndroidSetup" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.18 at 19h 05m 52s.xml">
+    <history-entry file="Junit_test - 2017.12.19 at 15h 19m 27s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.18 at 19h 06m 48s.xml">
+    <history-entry file="Junit_test - 2017.12.19 at 15h 20m 34s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.18 at 19h 07m 13s.xml">
+    <history-entry file="Junit_test - 2017.12.19 at 15h 21m 40s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 24m 27s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 30m 17s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 36m 43s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 40m 02s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 49m 34s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 51m 57s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.19 at 15h 55m 00s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -427,7 +434,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31962398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15628743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15808383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497006" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -473,7 +480,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed TestNG to JUnit, added APK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed TestNG to JUnit, added APK" />
+    <MESSAGE value="Fix for JUnit" />
+    <MESSAGE value="Activities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -486,6 +495,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -514,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AppTest01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -532,10 +549,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AppTest01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="319">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
