@@ -20,20 +20,22 @@ import static org.junit.Assert.assertEquals;
 public class AndroidSetup {
     protected static AndroidDriver driver;
 
-    WebDriverWait wait;
+    private WebDriverWait wait;
 
     //кнопка в левом верхнем углу ("меню" или "назад")
-    By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
+    private By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
     //кнопка "Любимые"
-    By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
+    private By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
     //первая запись в списке любимых
-    By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
+    private By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
     //кнопка "В любимые"
-    //By favBtn = By.xpath("//android.widget.ImageView[@resource-id='info.goodline.btv:id/ivTriggerButtonContainer'");
-    By favBtn = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
+    private By favBtn = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
 
-    String activityMain = ".ui.activity.MainActivity";
-    String activityFav = ".ui.activity.SearchBarActivity";
+    private String activityMain = ".ui.activity.MainActivity";
+    private String activityFav = ".ui.activity.SearchBarActivity";
+
+    private String favTitleInMain = "";
+    private String favTitleInFav = "";
 
     protected static void prepareAndroidForAppium() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -91,10 +93,6 @@ public class AndroidSetup {
     @Test
     public void openFavTest()
     {
-        //By password = By.id(app_package_name + "user_password");
-        /*driver.findElement(userId).sendKeys("someone@testvagrant.com");
-        driver.findElement(password).sendKeys("testvagrant123");*/
-
         //waitForActivity(activityMain, 10);
         assertCurrentActivity(activityMain);
 
@@ -138,7 +136,6 @@ public class AndroidSetup {
         int starty = (int) (driver.manage().window().getSize().height * 0.90);
         int endy = (int) (driver.manage().window().getSize().height * 0.20);
         int startx = driver.manage().window().getSize().width / 2;
-        //System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
         //Thread.sleep(10000);
         driver.swipe(startx, endy, startx, starty, 300);
     }
