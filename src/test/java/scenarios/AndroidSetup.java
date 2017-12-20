@@ -2,16 +2,15 @@ package scenarios;
 
 import io.appium.java_client.android.AndroidDriver;
 
-import org.junit.Before;
+import org.junit.*;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import org.openqa.selenium.By;
-import org.junit.Test;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -30,6 +29,15 @@ public class AndroidSetup {
     private By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
     //кнопка "В любимые"
     private By favBtn = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
+    //private By favBtn = By.xpath("//android.widget.TextView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
+    //
+    private By favWidget = By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id, 'info.goodline.btv:id/recyclerView')]");
+    //название фильма
+    private By movieTitle = By.xpath("//android.widget.TextView[contains(@resource-id, 'info.goodline.btv:id/tvTitle')]");
+    //фильма для добавления в избранное
+    private By movie = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivPoster')]");
+    //фильмы в избранном
+    private By favMovies = By.id("info.goodline.btv:id/ivEcPicture");
 
     private String activityMain = ".ui.activity.MainActivity";
     private String activityFav = ".ui.activity.SearchBarActivity";
@@ -62,10 +70,6 @@ public class AndroidSetup {
     @Before
     public void clearFavsTest()
     {
-        //By password = By.id(app_package_name + "user_password");
-        /*driver.findElement(userId).sendKeys("someone@testvagrant.com");
-        driver.findElement(password).sendKeys("testvagrant123");*/
-
         waitForActivity(activityMain, 10);
         assertCurrentActivity(activityMain);
 
@@ -77,23 +81,35 @@ public class AndroidSetup {
         waitElement(menuBtn);
         assertCurrentActivity(activityFav);
 
-        //WebElement fav;
-        for (int i = 0; i < 2; i++) {
-            driver.findElement(favEl).click();
+        List<WebElement> favs = driver.findElements(favMovies);
+        for(int i = 0; i < favs.size(); i++)
+        {
+            favs.get(i).click();
             waitElement(favBtn);
             driver.findElement(favBtn).click();
             driver.findElement(menuBtn).click();
-            waitElement(menuBtn);
-            refresh();
+            waitElement(favWidget);
         }
 
         driver.findElement(menuBtn).click();
     }
 
     @Test
-    public void openFavTest()
+    public void addFavTest()
     {
-        //waitForActivity(activityMain, 10);
+        waitElement(menuBtn);
+        assertCurrentActivity(activityMain);
+
+        driver.findElement(movie).click();
+        waitElement(favBtn);
+        favTitleInMain = driver.findElement(movieTitle).getText();
+        driver.findElement(favBtn).click();
+        driver.findElement(menuBtn).click();
+
+        driver.findElement(menuBtn).click();
+
+        //
+        waitElement(menuBtn);
         assertCurrentActivity(activityMain);
 
         driver.findElement(menuBtn).click();
@@ -104,8 +120,39 @@ public class AndroidSetup {
         waitElement(menuBtn);
         assertCurrentActivity(activityFav);
 
+        refresh();
+        driver.findElement(favEl).click();
+        waitElement(favBtn);
+        favTitleInFav = driver.findElement(movieTitle).getText();
         driver.findElement(menuBtn).click();
+        waitElement(menuBtn);
+
+        assertEquals(favTitleInMain, favTitleInFav);
     }
+
+    /*@After
+    public void checkFavTest()
+    {
+        waitElement(menuBtn);
+        assertCurrentActivity(activityMain);
+
+        driver.findElement(menuBtn).click();
+
+        waitElement(favMenuBtn);
+        driver.findElement(favMenuBtn).click();
+
+        waitElement(menuBtn);
+        assertCurrentActivity(activityFav);
+
+        refresh();
+        driver.findElement(favEl).click();
+        waitElement(favBtn);
+        favTitleInFav = driver.findElement(movieTitle).getText();
+        driver.findElement(menuBtn).click();
+        waitElement(menuBtn);
+
+        assertEquals(favTitleInMain, favTitleInFav);
+    }*/
 
     public void waitForActivity(String activityName, int timeout)
     {
@@ -136,7 +183,6 @@ public class AndroidSetup {
         int starty = (int) (driver.manage().window().getSize().height * 0.90);
         int endy = (int) (driver.manage().window().getSize().height * 0.20);
         int startx = driver.manage().window().getSize().width / 2;
-        //Thread.sleep(10000);
         driver.swipe(startx, endy, startx, starty, 300);
     }
 }
