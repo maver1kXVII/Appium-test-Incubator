@@ -29,8 +29,8 @@
       <file leaf-file-name="AndroidSetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="76" column="42" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -430,19 +430,17 @@
       <option name="project" value="LOCAL" />
       <updated>1513841215791</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Removed the second menu press">
+      <created>1513845424722</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1513845424723</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Junit_test - 2017.12.21 at 15h 16m 52s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.21 at 15h 17m 34s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Junit_test - 2017.12.21 at 15h 19m 12s.xml">
-      <configuration name="Junit test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Junit_test - 2017.12.21 at 15h 20m 55s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
@@ -462,6 +460,15 @@
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Junit_test - 2017.12.21 at 15h 34m 32s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.21 at 15h 40m 31s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.21 at 15h 46m 53s.xml">
+      <configuration name="Junit test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Junit_test - 2017.12.21 at 15h 49m 12s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -541,7 +548,8 @@
     <MESSAGE value="Added a method to clear favourites before testing" />
     <MESSAGE value="Fixed clear favourites method" />
     <MESSAGE value="Fixes for button vars" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes for button vars" />
+    <MESSAGE value="Removed the second menu press" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the second menu press" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,8 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="191">
+          <caret line="76" column="42" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

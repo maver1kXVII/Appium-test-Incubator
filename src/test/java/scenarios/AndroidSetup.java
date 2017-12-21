@@ -75,15 +75,7 @@ public class AndroidSetup {
     public void clearFavsTest()
     {
         waitForActivity(activityMain, 10);
-        assertCurrentActivity(activityMain);
-
-        driver.findElement(menuBtn).click();
-
-        waitElement(favMenuBtn);
-        driver.findElement(favMenuBtn).click();
-
-        waitElement(menuBtn);
-        assertCurrentActivity(activityFav);
+        openFavsMenu();
 
         List<WebElement> favs = driver.findElements(favMovies);
         for(int i = 0; i < favs.size(); i++)
@@ -110,19 +102,7 @@ public class AndroidSetup {
         driver.findElement(favBtn).click();
         driver.findElement(menuBtn).click();
 
-        //
-        waitElement(menuBtn);
-        assertCurrentActivity(activityMain);
-
-        driver.findElement(menuBtn).click();
-        //driver.sendKeyEvent(AndroidKeyCode.BACK);
-
-        waitElement(menuWidget);
-        driver.findElement(favMenuBtn).click();
-
-        waitElement(menuBtn);
-        assertCurrentActivity(activityFav);
-
+        openFavsMenu();
         refresh();
         driver.findElement(favEl).click();
         waitElement(favBtn);
@@ -163,5 +143,19 @@ public class AndroidSetup {
         int endy = (int) (driver.manage().window().getSize().height * 0.20);
         int startx = driver.manage().window().getSize().width / 2;
         driver.swipe(startx, endy, startx, starty, 300);
+    }
+
+    public void openFavsMenu()
+    {
+        waitElement(menuBtn);
+        assertCurrentActivity(activityMain);
+
+        driver.findElement(menuBtn).click();
+
+        waitElement(menuWidget);
+        driver.findElement(favMenuBtn).click();
+
+        waitElement(menuBtn);
+        assertCurrentActivity(activityFav);
     }
 }
