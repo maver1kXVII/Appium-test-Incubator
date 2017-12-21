@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d88643d8-b5a8-4f95-aaed-c974252b0ff6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" afterPath="$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="AndroidSetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="80" column="25" lean-forward="true" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+            <state relative-caret-position="80">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -422,38 +423,45 @@
       <option name="project" value="LOCAL" />
       <updated>1513838502377</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixes for button vars">
+      <created>1513841215791</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1513841215791</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Junit_test - 2017.12.20 at 15h 45m 43s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 16m 52s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 15h 48m 13s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 17m 34s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 18h 40m 38s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 19m 12s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 18h 44m 47s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 20m 55s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 18h 46m 34s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 24m 24s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 19h 19m 41s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 28m 38s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 19h 20m 42s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 29m 35s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.20 at 19h 22m 01s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 31m 21s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.21 at 13h 33m 39s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 33m 12s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Junit_test - 2017.12.21 at 13h 36m 12s.xml">
+    <history-entry file="Junit_test - 2017.12.21 at 15h 34m 32s.xml">
       <configuration name="Junit test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -468,7 +476,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="157" y="64" width="1716" height="980" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -478,7 +485,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31139836" sideWeight="0.5023952" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22561692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22561692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16568743" sideWeight="0.4976048" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31962398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -666,8 +673,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/scenarios/AndroidSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="80" column="25" lean-forward="true" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        <state relative-caret-position="80">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

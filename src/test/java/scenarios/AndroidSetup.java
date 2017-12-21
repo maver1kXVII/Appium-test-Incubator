@@ -2,6 +2,7 @@ package scenarios;
 
 import io.appium.java_client.android.AndroidDriver;
 
+import io.appium.java_client.android.AndroidKeyCode;
 import org.junit.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -23,6 +24,10 @@ public class AndroidSetup {
 
     //кнопка в левом верхнем углу ("меню" или "назад")
     private By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
+    //меню
+    private By menuWidget = By.id("info.goodline.btv:id/rvDrawerMenu");
+    //
+    private By showMore = By.id("info.goodline.btv:id/ibControl");
     //кнопка "Любимые"
     private By favMenuBtn = By.xpath("//android.widget.TextView[contains(@text, 'Любимое')]");
     //первая запись в списке любимых
@@ -105,15 +110,14 @@ public class AndroidSetup {
         driver.findElement(favBtn).click();
         driver.findElement(menuBtn).click();
 
-        driver.findElement(menuBtn).click();
-
         //
         waitElement(menuBtn);
         assertCurrentActivity(activityMain);
 
         driver.findElement(menuBtn).click();
+        //driver.sendKeyEvent(AndroidKeyCode.BACK);
 
-        waitElement(favMenuBtn);
+        waitElement(menuWidget);
         driver.findElement(favMenuBtn).click();
 
         waitElement(menuBtn);
@@ -128,30 +132,6 @@ public class AndroidSetup {
 
         assertEquals(favTitleInMain, favTitleInFav);
     }
-
-    /*@After
-    public void checkFavTest()
-    {
-        waitElement(menuBtn);
-        assertCurrentActivity(activityMain);
-
-        driver.findElement(menuBtn).click();
-
-        waitElement(favMenuBtn);
-        driver.findElement(favMenuBtn).click();
-
-        waitElement(menuBtn);
-        assertCurrentActivity(activityFav);
-
-        refresh();
-        driver.findElement(favEl).click();
-        waitElement(favBtn);
-        favTitleInFav = driver.findElement(movieTitle).getText();
-        driver.findElement(menuBtn).click();
-        waitElement(menuBtn);
-
-        assertEquals(favTitleInMain, favTitleInFav);
-    }*/
 
     public void waitForActivity(String activityName, int timeout)
     {
