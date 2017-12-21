@@ -24,7 +24,6 @@ public class AndroidSetup {
     //кнопка в левом верхнем углу ("меню" или "назад")
     private By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
     //кнопка "Любимые"
-    //private By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
     private By favMenuBtn = By.xpath("//android.widget.TextView[contains(@text, 'Любимое')]");
     //первая запись в списке любимых
     private By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
