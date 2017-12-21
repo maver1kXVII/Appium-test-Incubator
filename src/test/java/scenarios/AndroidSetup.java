@@ -24,13 +24,13 @@ public class AndroidSetup {
     //кнопка в левом верхнем углу ("меню" или "назад")
     private By menuBtn = By.xpath("//android.widget.ImageButton[contains(@index, '0')]");
     //кнопка "Любимые"
-    private By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
+    //private By favMenuBtn = By.xpath("//android.widget.ImageView[contains(@index, '0')]");
+    private By favMenuBtn = By.xpath("//android.widget.TextView[contains(@text, 'Любимое')]");
     //первая запись в списке любимых
     private By favEl = By.xpath("//android.widget.FrameLayout[contains(@bounds, '[0,208][768,470]')]");
     //кнопка "В любимые"
     private By favBtn = By.xpath("//android.widget.ImageView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
-    //private By favBtn = By.xpath("//android.widget.TextView[contains(@resource-id, 'info.goodline.btv:id/ivTriggerButtonContainer')]");
-    //
+    //виджет списка фильмов в избранном
     private By favWidget = By.xpath("//android.support.v7.widget.RecyclerView[contains(@resource-id, 'info.goodline.btv:id/recyclerView')]");
     //название фильма
     private By movieTitle = By.xpath("//android.widget.TextView[contains(@resource-id, 'info.goodline.btv:id/tvTitle')]");
