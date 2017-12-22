@@ -76,39 +76,17 @@ public class AndroidSetup {
     {
         waitForActivity(activityMain, 10);
         openFavsMenu();
-
-        List<WebElement> favs = driver.findElements(favMovies);
-        for(int i = 0; i < favs.size(); i++)
-        {
-            favs.get(i).click();
-            waitElement(favBtn);
-            driver.findElement(favBtn).click();
-            driver.findElement(menuBtn).click();
-            waitElement(favWidget);
-        }
-
-        driver.findElement(menuBtn).click();
+        clearFavList();
+        backToMenu();
     }
 
     @Test
     public void addFavTest()
     {
-        waitElement(menuBtn);
-        assertCurrentActivity(activityMain);
-
-        driver.findElement(movie).click();
-        waitElement(favBtn);
-        favTitleInMain = driver.findElement(movieTitle).getText();
-        driver.findElement(favBtn).click();
-        driver.findElement(menuBtn).click();
-
+        favTitleInMain = addToFavs();
         openFavsMenu();
         refresh();
-        driver.findElement(favEl).click();
-        waitElement(favBtn);
-        favTitleInFav = driver.findElement(movieTitle).getText();
-        driver.findElement(menuBtn).click();
-        waitElement(menuBtn);
+        favTitleInFav = getFirstFavTitle();
 
         assertEquals(favTitleInMain, favTitleInFav);
     }
@@ -137,6 +115,9 @@ public class AndroidSetup {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    /**
+     * Performs a bottom to top screen swipe.
+     */
     public void refresh()
     {
         int starty = (int) (driver.manage().window().getSize().height * 0.90);
@@ -145,6 +126,9 @@ public class AndroidSetup {
         driver.swipe(startx, endy, startx, starty, 300);
     }
 
+    /**
+     * Opens the Favourites menu. Use in the main menu.
+     */
     public void openFavsMenu()
     {
         waitElement(menuBtn);
@@ -157,5 +141,58 @@ public class AndroidSetup {
 
         waitElement(menuBtn);
         assertCurrentActivity(activityFav);
+    }
+
+    /**
+     * Clears the list of favourites. Use when the favourites menu is already opened.
+     */
+    public void clearFavList()
+    {
+        assertCurrentActivity(activityFav);
+        List<WebElement> favs = driver.findElements(favMovies);
+        for(int i = 0; i < favs.size(); i++)
+        {
+            favs.get(i).click();
+            toggleFavStatus();
+            driver.findElement(menuBtn).click();
+            waitElement(favWidget);
+        }
+    }
+
+    /**
+     * Add or removes a movie from favourites depending on its current status.
+     */
+    public void toggleFavStatus()
+    {
+        waitElement(favBtn);
+        driver.findElement(favBtn).click();
+    }
+
+    public void backToMenu()
+    {
+        driver.findElement(menuBtn).click();
+        waitElement(menuBtn);
+        assertCurrentActivity(activityMain);
+    }
+
+    public String addToFavs()
+    {
+        String title = "";
+        driver.findElement(movie).click();
+        toggleFavStatus();
+        title = driver.findElement(movieTitle).getText();
+        driver.findElement(menuBtn).click();
+        return title;
+    }
+
+    public String getFirstFavTitle()
+    {
+        String title = "";
+        driver.findElement(favEl).click();
+        waitElement(favBtn);
+        title = driver.findElement(movieTitle).getText();
+        driver.findElement(menuBtn).click();
+        waitElement(menuBtn);
+        return title;
     }
 }
