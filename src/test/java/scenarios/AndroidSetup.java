@@ -46,9 +46,6 @@ public class AndroidSetup {
     private String activityMain = ".ui.activity.MainActivity";
     private String activityFav = ".ui.activity.SearchBarActivity";
 
-    private String favTitleInMain = "";
-    private String favTitleInFav = "";
-
     protected static void prepareAndroidForAppium() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium-version", "1.0");
@@ -59,36 +56,6 @@ public class AndroidSetup {
         capabilities.setCapability("appPackage", "info.goodline.btv");
         capabilities.setCapability("appActivity", "info.goodline.btv.ui.activity.AuthActivity");
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-    }
-
-    @BeforeClass
-    public static void setUp() throws Exception {
-        prepareAndroidForAppium();
-    }
-
-    @AfterClass
-    public static void tearDown() throws Exception {
-        driver.quit();
-    }
-
-    @Before
-    public void clearFavsTest()
-    {
-        waitForActivity(activityMain, 10);
-        openFavsMenu();
-        clearFavList();
-        backToMenu();
-    }
-
-    @Test
-    public void addFavTest()
-    {
-        favTitleInMain = addToFavs();
-        openFavsMenu();
-        refresh();
-        favTitleInFav = getFirstFavTitle();
-
-        assertEquals(favTitleInMain, favTitleInFav);
     }
 
     public void waitForActivity(String activityName, int timeout)
@@ -102,6 +69,11 @@ public class AndroidSetup {
             }
             counter++;
         } while(!(driver.currentActivity().contains(activityName)) && (counter<=timeout));
+    }
+
+    public void waitForMain(int timeout)
+    {
+        waitForActivity(activityMain, 10);
     }
 
     public void assertCurrentActivity(String desiredActivity)
