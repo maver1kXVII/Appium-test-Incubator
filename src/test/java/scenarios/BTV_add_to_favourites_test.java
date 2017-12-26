@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class BTV_Test_01 extends AndroidSetup {
+public class BTV_add_to_favourites_test extends AndroidSetup {
 
     private String favTitleInMain = "";
     private String favTitleInFav = "";
@@ -25,19 +25,21 @@ public class BTV_Test_01 extends AndroidSetup {
     @Before
     public void clearFavsTest()
     {
-        waitForMain(10);
-        openFavsMenu();
-        clearFavList();
-        backToMenu();
+        initPages();
+
+        pageMain.waitForMain(10);
+        pageMain.openFavsMenu();
+        pageFav.clearFavList();
+        pageCommon.backToMenu();
     }
 
     @Test
     public void addFavTest()
     {
-        favTitleInMain = addToFavs();
-        openFavsMenu();
-        refresh();
-        favTitleInFav = getFirstFavTitle();
+        favTitleInMain = pageFav.addToFavs();
+        pageMain.openFavsMenu();
+        pageCommon.refresh();
+        favTitleInFav = pageFav.getFirstFavTitle();
 
         assertEquals(favTitleInMain, favTitleInFav);
     }
