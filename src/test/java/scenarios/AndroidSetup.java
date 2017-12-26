@@ -2,23 +2,14 @@ package scenarios;
 
 import io.appium.java_client.android.AndroidDriver;
 
-import io.appium.java_client.android.AndroidKeyCode;
-import org.junit.*;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BTV_common;
 import pages.BTV_fav_page;
 import pages.BTV_main_page;
-
-import static org.junit.Assert.assertEquals;
 
 public class AndroidSetup {
     protected static AndroidDriver driver;
