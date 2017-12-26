@@ -27,7 +27,6 @@ public class AndroidSetup {
     protected BTV_main_page pageMain;
     protected BTV_fav_page pageFav;
 
-
     //
     //private By showMore = By.id("info.goodline.btv:id/ibControl");
 
@@ -49,14 +48,4 @@ public class AndroidSetup {
         pageMain = new BTV_main_page(driver);
         pageFav = new BTV_fav_page(driver);
     }
-
-
-
-
-
-
-
-
-
-
 }
