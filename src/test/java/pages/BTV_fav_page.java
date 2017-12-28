@@ -28,6 +28,15 @@ public class BTV_fav_page extends BTV_common {
     }
 
     /**
+     * Add or removes a movie from favourites depending on its current status.
+     */
+    private void toggleFavStatus()
+    {
+        waitElement(favBtn);
+        driver.findElement(favBtn).click();
+    }
+
+    /**
      * Clears the list of favourites. Use when the favourites menu is already opened.
      */
     public void clearFavList()
@@ -41,15 +50,6 @@ public class BTV_fav_page extends BTV_common {
             driver.findElement(menuBtn).click();
             waitElement(favWidget);
         }
-    }
-
-    /**
-     * Add or removes a movie from favourites depending on its current status.
-     */
-    private void toggleFavStatus()
-    {
-        waitElement(favBtn);
-        driver.findElement(favBtn).click();
     }
 
     public String addToFavs()

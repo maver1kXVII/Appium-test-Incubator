@@ -16,24 +16,38 @@ public class BTV_main_page extends BTV_common {
         super(driver01);
     }
 
-    /**
-     * Opens the Favourites menu.
-     */
-    public void openFavsMenu()
+    private void waitMain()
+    {
+        waitForActivity(activityMain, 10);
+    }
+
+    private void openMenu()
     {
         waitElement(menuBtn);
         assertCurrentActivity(activityMain);
 
         driver.findElement(menuBtn).click();
+    }
 
+    private void clickFavMenu()
+    {
         waitElement(menuWidget);
         driver.findElement(favMenuBtn).click();
 
         waitElement(menuBtn);
     }
 
+    /**
+     * Opens the Favourites menu.
+     */
+    public void openFavsMenu()
+    {
+        openMenu();
+        clickFavMenu();
+    }
+
     public void waitForMain(int timeout)
     {
-        waitForActivity(activityMain, 10);
+        waitMain();
     }
 }

@@ -44,6 +44,11 @@ public class BTV_common {
         } while(!(driver.currentActivity().contains(activityName)) && (counter<=timeout));
     }
 
+    private void menuBtnClick()
+    {
+        driver.findElement(menuBtn).click();
+    }
+
     /**
      * Performs a bottom to top screen swipe.
      */
@@ -57,7 +62,7 @@ public class BTV_common {
 
     public void backToMenu()
     {
-        driver.findElement(menuBtn).click();
+        menuBtnClick();
         waitElement(menuBtn);
     }
 }
