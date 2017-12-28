@@ -36,12 +36,29 @@ public class BTV_fav_page extends BTV_common {
         driver.findElement(favBtn).click();
     }
 
-    /**
-     * Clears the list of favourites. Use when the favourites menu is already opened.
-     */
-    public void clearFavList()
+    private void openMovie()
+    {
+        driver.findElement(movie).click();
+    }
+
+    private void openFavEl()
+    {
+        driver.findElement(favEl).click();
+        waitElement(favBtn);
+    }
+
+    private String getMovieTitle()
+    {
+        return driver.findElement(movieTitle).getText();
+    }
+
+    private void assertActivity()
     {
         assertCurrentActivity(activityFav);
+    }
+
+    private void clearFavs()
+    {
         List<WebElement> favs = driver.findElements(favMovies);
         for(int i = 0; i < favs.size(); i++)
         {
@@ -52,24 +69,31 @@ public class BTV_fav_page extends BTV_common {
         }
     }
 
+    /**
+     * Clears the list of favourites. Use when the favourites menu is already opened.
+     */
+    public void clearFavList()
+    {
+        assertActivity();
+        clearFavs();
+    }
+
     public String addToFavs()
     {
         String title = "";
-        driver.findElement(movie).click();
+        openMovie();
         toggleFavStatus();
-        title = driver.findElement(movieTitle).getText();
-        driver.findElement(menuBtn).click();
+        title = getMovieTitle();
+        backToMenu();
         return title;
     }
 
     public String getFirstFavTitle()
     {
         String title = "";
-        driver.findElement(favEl).click();
-        waitElement(favBtn);
-        title = driver.findElement(movieTitle).getText();
-        driver.findElement(menuBtn).click();
-        waitElement(menuBtn);
+        openFavEl();
+        title = getMovieTitle();
+        backToMenu();
         return title;
     }
 }
