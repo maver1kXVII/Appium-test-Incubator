@@ -27,7 +27,7 @@ public class AndroidSetup {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "4.4");
         capabilities.setCapability("deviceName", "Emu01");
-        capabilities.setCapability("newCommandTimeout", 160);
+        capabilities.setCapability("newCommandTimeout", 200);
         capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/info-goodline-btv.391.apk");
         capabilities.setCapability("appPackage", "info.goodline.btv");
         capabilities.setCapability("appActivity", "info.goodline.btv.ui.activity.AuthActivity");
