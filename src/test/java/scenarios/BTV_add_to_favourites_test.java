@@ -22,7 +22,7 @@ public class BTV_add_to_favourites_test extends AndroidSetup {
         driver.quit();
     }
 
-    @Before
+    //@Before
     public void clearFavsTest()
     {
         initPages();
@@ -36,6 +36,10 @@ public class BTV_add_to_favourites_test extends AndroidSetup {
     @Test
     public void addFavTest()
     {
+        //Temporary change for Jenkins
+        initPages();
+        pageMain.waitForMain(10);
+        
         favTitleInMain = pageFav.addToFavs();
         pageMain.openFavsMenu();
         pageCommon.refresh();
