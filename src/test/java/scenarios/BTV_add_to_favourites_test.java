@@ -40,8 +40,8 @@ public class BTV_add_to_favourites_test extends AndroidSetup {
         initPages();
         pageMain.waitForMain(10);
         
-        favTitleInMain = pageFav.addToFavs();
-        /*pageMain.openFavsMenu();
+        /*favTitleInMain = pageFav.addToFavs();
+        pageMain.openFavsMenu();
         pageCommon.refresh();
         favTitleInFav = pageFav.getFirstFavTitle();
 
